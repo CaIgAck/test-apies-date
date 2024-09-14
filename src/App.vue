@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <nav>
+  <nav class="max-w-screen-lg m-auto grid grid-cols-3 text-center mb-12">
     <RouterLink to="/">
       Go Temporal Api
     </RouterLink>
