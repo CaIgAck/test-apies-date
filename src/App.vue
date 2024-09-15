@@ -2,15 +2,18 @@
 </script>
 
 <template>
-  <nav class="max-w-screen-lg m-auto grid grid-cols-3 text-center mb-12">
+  <nav class="max-w-screen-lg m-auto grid grid-cols-4 text-center mb-12">
     <RouterLink to="/">
-      Go Temporal Api
+      Home 
+    </RouterLink>
+    <RouterLink to="/temporal">
+      Temporal Api
     </RouterLink>
     <RouterLink to="/luxon">
-      Go to Luxon 
+      Luxon 
     </RouterLink>
     <RouterLink to="/date">
-      Go to Date Api 
+      Date Api 
     </RouterLink>
   </nav>
   <main>

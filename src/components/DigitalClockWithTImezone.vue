@@ -22,10 +22,13 @@ const getHours = computed(() => splittedTime.value[0] );
 
 <template>
   <article class="mt-12 clock-container">
-    <h3 class="clock__col">
-      {{ props.timezone }}
-      {{ props.offset }}
-    </h3>
+    <div class="clock__col">
+      <h3 class="clock__unit">
+        {{ props.timezone }}
+        {{ props.offset }}
+      </h3>
+    </div>
+
     <article class="clock">
       <div class="clock__col">
         <DigitalClock :value="getHours" />
