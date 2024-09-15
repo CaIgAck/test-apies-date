@@ -62,7 +62,7 @@ const getHours = computed(() => splittedTime.value[0] );
 <style scoped>
 .clock-container {
     @apply
-        bg-gray-900 rounded-xl
+        bg-gray-900 rounded-xl max-w-[350px]
 }
 .clock {
   @apply

@@ -2,7 +2,7 @@
 </script>
 
 <template>
-  <nav class="max-w-screen-lg m-auto grid grid-cols-4 text-center mb-12">
+  <nav class="max-w-screen-lg m-auto grid grid-cols-4 text-center">
     <RouterLink to="/">
       Home 
     </RouterLink>

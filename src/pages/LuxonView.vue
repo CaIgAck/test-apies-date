@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import DigitalClockWithTImezone from '../components/DigitalClockWithTImezone.vue';
 import { useLuxonDate } from '../composables/useLuxonDate';
+import BaseLayout from '../layouts/BaseLayout.vue';
 
 const { luxonTimezoneKits } = useLuxonDate();
 </script>
 
 <template>
-  <section>
-    <h1 class="mb-12 text-center">
+  <BaseLayout>
+    <template #header>
       Luxon
-    </h1>
-    <article class="grid grid-cols-6 gap-4 text-center">
+    </template>
+    <template #body>
       <DigitalClockWithTImezone
         v-for="timezoneKit in luxonTimezoneKits"
         :key="timezoneKit.timezone"
@@ -19,8 +20,8 @@ const { luxonTimezoneKits } = useLuxonDate();
         :date="timezoneKit.date"
         :offset="timezoneKit.offset"
       />
-    </article>
-  </section>
+    </template>
+  </BaseLayout>
 </template>
 
 <style scoped>

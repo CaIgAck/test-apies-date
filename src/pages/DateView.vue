@@ -1,16 +1,17 @@
 <script setup lang="ts">
 import DigitalClockWithTImezone from '../components/DigitalClockWithTImezone.vue';
 import { useDateAPI } from '../composables/useDefaultDate';
+import BaseLayout from '../layouts/BaseLayout.vue';
 
 const { dateTimezoneKits } = useDateAPI();
 </script>
 
 <template>
-  <section>
-    <h1 class="mb-12 text-center">
+  <BaseLayout>
+    <template #header>
       Date
-    </h1>
-    <article class="grid grid-cols-6 gap-4 text-center">
+    </template>
+    <template #body>
       <DigitalClockWithTImezone
         v-for="timezoneKit in dateTimezoneKits"
         :key="timezoneKit.timezone"
@@ -19,8 +20,8 @@ const { dateTimezoneKits } = useDateAPI();
         :date="timezoneKit.date"
         :offset="timezoneKit.offset"
       />
-    </article>
-  </section>
+    </template>
+  </BaseLayout>
 </template>
 
 <style scoped>

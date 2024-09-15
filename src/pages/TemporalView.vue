@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { useTemporalDate } from '../composables/useTemporalDate';
 import DigitalClockWithTImezone from '../components/DigitalClockWithTImezone.vue';
+import BaseLayout from '../layouts/BaseLayout.vue';
 
 
 const {temporalTimezoneKits} = useTemporalDate();
@@ -8,11 +9,11 @@ const {temporalTimezoneKits} = useTemporalDate();
 </script>
 
 <template>
-  <section>
-    <h1 class="mb-12 text-center">
+  <BaseLayout>
+    <template #header>
       Temporal API
-    </h1>
-    <article class="grid grid-cols-6 gap-4 text-center">
+    </template>
+    <template #body>
       <DigitalClockWithTImezone
         v-for="timezoneKit in temporalTimezoneKits"
         :key="timezoneKit.timezone"
@@ -21,8 +22,8 @@ const {temporalTimezoneKits} = useTemporalDate();
         :date="timezoneKit.date"
         :offset="timezoneKit.offset"
       />
-    </article>
-  </section>
+    </template>
+  </BaseLayout>
 </template>
 
 <style>

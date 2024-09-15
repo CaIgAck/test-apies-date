@@ -5,7 +5,7 @@
 
 
 <template>
-  <section>
+  <section class="my-12">
     <h1 class="mb-12 text-center">
       Всем привет!
     </h1>
